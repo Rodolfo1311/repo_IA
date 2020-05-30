@@ -69,11 +69,68 @@ a mayor entrenamiento mayor sera la exactitud del model para detener el entrenam
 ![Hilux](https://user-images.githubusercontent.com/64815890/82742363-4fb20a00-9d1a-11ea-95e5-e0bf066678c0.jpeg)
 ![Ladera](https://user-images.githubusercontent.com/64815890/82742364-50e33700-9d1a-11ea-94d1-c44421fd5ccc.jpeg)
 
+
 ## Segundo entregable 
-### obtencion de imagenes
+### 1. obtencion de imagenes
 para el segundo entregable lo que se realizo fue conseguir imagenes de todos los tipos de vehiculos solicitados los cuales son:
 #### 1.pickup
 #### 2.bus
 #### 3.camion
 #### 4.mototaxi
-### configuracion de label_map.pbtxt
+#### 5.moto
+### 2. configuracion de label_map.pbtxt
+en este archivo se encuentra en deteccion_objetos>configuracion la siguiente estructura:
+###### .item {
+######  id: 1
+######  name: 'moto'
+###### }
+
+este objeto consta de 2 campos los cuales son id y name en los cuales se debe escribir el id y nombre de cada una de las etiequetas
+ para declarar una nueva solamente se debe copiar esta estructura y llenarla con el id siguiente y el nombre de la etiqueta 
+### 3. configuracion de labels.txt
+este archivo se encuentra en deteccion_objetos>configuracion y es un archivo de texto en el cual se debe indicar todas las etiquetas 
+que se utilizaran en este caso son 5
+###### 0.null
+###### 1.pickup
+###### 2.bus
+###### 3.camion
+###### 4.mototaxi
+###### 5.moto
+
+la primera linea siempre debe ser null
+### 4. configurar numero de clases en el archivo faster_rcnn_resnet101_coco.config
+este archivo se encuentra en deteccion_objetos>modelo lo unico que se debe configurar en este archivo es el numero de clases que hace 
+referencia a la cantidad de etiquetas que se utilizaran que en este caso seran 5
+###### num_classes: 5
+
+### 5. eliminacion de los archivos .CSV y .Record de la primera entrega 
+estos archivos se encuentran en deteccion_objetos>CSV y deteccion_objetos>TFRecords es necesario dejar estas dos carpetas vacias para
+crear los nuevos archivos .CSV y .Record 
+
+### 6. creacion de archivos .CSV y .Record
+###### en el promt de anaconda utilizar los comandos:
+###### 1. python xml_a_csv.py --inputs=img_test --output=test
+###### 2. python xml_a_csv.py --inputs=img_entrenamiento --output=entrenamiento
+###### 3. python csv_a_tf.py --csv_input=CSV/test.csv --output_path=TFRecords/test.record --images=images
+###### 4. python csv_a_tf.py --csv_input=CSV/entrenamiento.csv --output_path=TFRecords/entrenamiento.record --images=images
+
+### 7. reentrenamiento del modelo 
+###### en el promt utilizar el siguiente comando
+###### python object_detection/train.py --logtostderr --train_dir=train --pipeline_config_path=modelo/faster_rcnn_resnet101_coco.config
+permitimos que el modelo entrene hasta que llegue a tener una perdida maxima del 0.9 para poder tener un modelo con una buena exactitud
+a mayor entrenamiento mayor sera la exactitud del model para detener el entrenamiento usar ctrl+C para este segundo entregable se entreno
+el modelo durante 4,633 pasos como podemos ver acontinuacion 
+
+
+
+
+### 8. congelado del nuevo modelo 
+###### en el promt utilizar el siguiente comando:
+###### python object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path modelo/faster_rcnn_resnet101_coco.config  --trained_checkpoint_prefix train/model.ckpt-684 --output_directory modelo_congelado
+
+### 9. probar el modelo 
+###### 1. para probar el modelo debemos pegar las imagenes en las que querramos reconocer objetos en la carpeta deteccion_objetos>imp_pruebas
+###### 2. en el promt utilizar el siguiente comando: python object_detection/object_detection_runner.py
+###### 3. el resultado de la prediccion se encontrara en la carpeta deteccion_objetos>output>imp_pruebas
+
+## RESULTADOS DEL SEGUNDO ENTREGABLE 
