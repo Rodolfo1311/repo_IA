@@ -121,8 +121,7 @@ permitimos que el modelo entrene hasta que llegue a tener una perdida maxima del
 a mayor entrenamiento mayor sera la exactitud del model para detener el entrenamiento usar ctrl+C para este segundo entregable se entreno
 el modelo durante 4,633 pasos como podemos ver acontinuacion 
 
-
-
+![entrenamiento](https://user-images.githubusercontent.com/64815890/83317194-43312400-a1e8-11ea-96d5-e9115f71556a.jpg)
 
 ### 8. congelado del nuevo modelo 
 ###### en el promt utilizar el siguiente comando:
@@ -132,5 +131,22 @@ el modelo durante 4,633 pasos como podemos ver acontinuacion
 ###### 1. para probar el modelo debemos pegar las imagenes en las que querramos reconocer objetos en la carpeta deteccion_objetos>imp_pruebas
 ###### 2. en el promt utilizar el siguiente comando: python object_detection/object_detection_runner.py
 ###### 3. el resultado de la prediccion se encontrara en la carpeta deteccion_objetos>output>imp_pruebas
+#### reconociendo 
+![reconociendo](https://user-images.githubusercontent.com/64815890/83317209-4d532280-a1e8-11ea-92a0-52068c3baf1a.jpg)
 
 ## RESULTADOS DEL SEGUNDO ENTREGABLE 
+![camion2](https://user-images.githubusercontent.com/64815890/83317190-41fff700-a1e8-11ea-91ac-772cf1cdbd0b.jpeg)
+![camion3](https://user-images.githubusercontent.com/64815890/83317191-42988d80-a1e8-11ea-9819-f35b0c01347d.jpeg)
+![carro naranja](https://user-images.githubusercontent.com/64815890/83317193-42988d80-a1e8-11ea-89fe-ea6727666756.jpeg)
+![Hilux](https://user-images.githubusercontent.com/64815890/83317196-462c1480-a1e8-11ea-93b7-199ee109bda6.jpeg)
+![moto](https://user-images.githubusercontent.com/64815890/83317199-475d4180-a1e8-11ea-97e8-dffc790e0417.jpeg)
+![moto1](https://user-images.githubusercontent.com/64815890/83317200-47f5d800-a1e8-11ea-9bf9-4157a192d735.jpeg)
+![moto3](https://user-images.githubusercontent.com/64815890/83317202-488e6e80-a1e8-11ea-9634-78b52bc356a0.jpeg)
+![mototaxi](https://user-images.githubusercontent.com/64815890/83317204-49bf9b80-a1e8-11ea-90d2-be43db81a417.jpeg)
+![mototaxi1](https://user-images.githubusercontent.com/64815890/83317205-4a583200-a1e8-11ea-92d7-27fa3bae0c46.jpeg)
+![mototaxi3](https://user-images.githubusercontent.com/64815890/83317207-4b895f00-a1e8-11ea-8e2f-f2cd15f25b5d.jpeg)
+![RAM](https://user-images.githubusercontent.com/64815890/83317208-4c21f580-a1e8-11ea-8f96-29172b2a5c10.jpeg)
+![bus](https://user-images.githubusercontent.com/64815890/83317210-4f1ce600-a1e8-11ea-8c37-a6efef6e7256.jpeg)
+![bus2](https://user-images.githubusercontent.com/64815890/83317213-504e1300-a1e8-11ea-8d22-13679728d5b2.jpeg)
+![bus3](https://user-images.githubusercontent.com/64815890/83317216-517f4000-a1e8-11ea-98dd-2a9b1e8e67d5.jpeg)
+![camion](https://user-images.githubusercontent.com/64815890/83317220-52b06d00-a1e8-11ea-9fe3-2f776dee25f6.jpeg)
