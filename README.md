@@ -68,3 +68,12 @@ a mayor entrenamiento mayor sera la exactitud del model para detener el entrenam
 ![carro rojo](https://user-images.githubusercontent.com/64815890/82742362-4e80dd00-9d1a-11ea-97be-c6718f56f611.jpeg)
 ![Hilux](https://user-images.githubusercontent.com/64815890/82742363-4fb20a00-9d1a-11ea-95e5-e0bf066678c0.jpeg)
 ![Ladera](https://user-images.githubusercontent.com/64815890/82742364-50e33700-9d1a-11ea-94d1-c44421fd5ccc.jpeg)
+
+## Segundo entregable 
+### obtencion de imagenes
+para el segundo entregable lo que se realizo fue conseguir imagenes de todos los tipos de vehiculos solicitados los cuales son:
+#### 1.pickup
+#### 2.bus
+#### 3.camion
+#### 4.mototaxi
+### configuracion de label_map.pbtxt
